@@ -59,7 +59,14 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton btnCapture, voiceButton;
     private TextureView textureView;
 
-    Button swirchCamera;
+    //Switch Camera
+    ImageButton swirchCamera;
+
+    public static final String CAMERA_FRONT = "1";
+    public static final String CAMERA_BACK = "0";
+
+    private String CameraId = CAMERA_FRONT;
+    //End Switch Camera
 
     // For Voice
     private static final int REQUEST_CODE_SPEECH_INPUT = 1000;
@@ -149,7 +156,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Switch Camera
-
+        swirchCamera = (ImageButton)findViewById(R.id.switch_camera);
+        swirchCamera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "This Feature is not ready yet", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 
